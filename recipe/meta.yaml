@@ -1,4 +1,4 @@
-{% set version = '1.0.0' %}
+{% set version = "2.0.0" %}
 
 package:
   name: r-robis
@@ -9,11 +9,11 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/robis_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/robis/robis_{{ version }}.tar.gz
-  sha256: 8f6c4c5710b78301cbf466fd5975769cfd0e0d70668b0e772bc7c03d86ef570b
+  sha256: 9eb06f3f95b1684fba3f391dd2411ea8eeb6ba5f87ee76afb606fe2cec1de751
 
 build:
   noarch: generic
-  number: 1000
+  number: 0
   script: R CMD INSTALL --build .
   rpaths:
     - lib/R/lib/
