@@ -5,13 +5,13 @@
 About r-robis
 =============
 
-Home: https
+Home: https://github.com/iobis/robis
 
 Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
-Summary: Client for the Ocean Biogeographic Information System (<http
+Summary: Client for the Ocean Biogeographic Information System (<https://obis.org>).
 
 
 
@@ -113,5 +113,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@conda-forge/r](https://github.com/conda-forge/r/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 
