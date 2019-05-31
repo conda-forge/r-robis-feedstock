@@ -1,4 +1,4 @@
-{% set version = '2.1.0' %}
+{% set version = "2.1.6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/robis_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/robis/robis_{{ version }}.tar.gz
-  sha256: 9092ba4a0d2d1e907cf34d1842118636611d2a46cd5ef9f051f1f579f474527d
+  sha256: f0469c9db957e188caa42c50b6ef02cc7ca6ae53415e339a5d326762a8dde8b8
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
