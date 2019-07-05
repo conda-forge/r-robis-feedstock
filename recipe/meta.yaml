@@ -1,4 +1,4 @@
-{% set version = "2.1.6" %}
+{% set version = '2.1.8' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/robis_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/robis/robis_{{ version }}.tar.gz
-  sha256: f0469c9db957e188caa42c50b6ef02cc7ca6ae53415e339a5d326762a8dde8b8
+  sha256: b302dcea2b43bace157f7356234ef951fdd3dd46f251d5cb7f82edb1815726e2
 
 build:
   merge_build_host: True  # [win]
@@ -58,8 +58,8 @@ extra:
 # Package: robis
 # Title: Ocean Biogeographic Information System (OBIS) Client
 # Description: Client for the Ocean Biogeographic Information System (<https://obis.org>).
-# Version: 2.1.0
-# Date: 2019-02-01
+# Version: 2.1.8
+# Date: 2019-06-01
 # Authors@R: c( person("Pieter", "Provoost", , "pieterprovoost@gmail.com", c("cre", "aut")), person("Samuel", "Bosch", , "mail@samuelbosch.com", role = "aut"), person("Ward", "Appeltans", role = "ctb"), person(, "OBIS", , "support@iobis.org", role = "cph") )
 # URL: https://github.com/iobis/robis
 # BugReports: https://github.com/iobis/robis/issues
@@ -69,8 +69,8 @@ extra:
 # Suggests: testthat
 # RoxygenNote: 6.1.1
 # NeedsCompilation: no
-# Packaged: 2019-02-26 14:42:49 UTC; pieter
+# Packaged: 2019-06-01 13:43:29 UTC; pieter
 # Author: Pieter Provoost [cre, aut], Samuel Bosch [aut], Ward Appeltans [ctb], OBIS [cph]
 # Maintainer: Pieter Provoost <pieterprovoost@gmail.com>
 # Repository: CRAN
-# Date/Publication: 2019-02-27 09:20:03 UTC
+# Date/Publication: 2019-06-03 13:20:08 UTC
