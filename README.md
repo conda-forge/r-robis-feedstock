@@ -5,7 +5,7 @@ Home: https://github.com/iobis/robis
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Client for the Ocean Biogeographic Information System (<https://obis.org>).
 
