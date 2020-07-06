@@ -27,16 +27,28 @@ requirements:
     - r-base
     - r-dplyr
     - r-ggplot2
+    - r-httpcache
     - r-httr
     - r-jsonlite
     - r-leaflet
+    - r-mapedit
+    - r-rlang
+    - r-sf
+    - r-tibble
+    - r-tidyr
   run:
     - r-base
     - r-dplyr
     - r-ggplot2
+    - r-httpcache
     - r-httr
     - r-jsonlite
     - r-leaflet
+    - r-mapedit
+    - r-rlang
+    - r-sf
+    - r-tibble
+    - r-tidyr
 
 test:
   commands:
