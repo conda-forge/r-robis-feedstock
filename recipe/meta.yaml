@@ -1,4 +1,4 @@
-{% set version = "2.6.0" %}
+{% set version = "2.8.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/robis_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/robis/robis_{{ version }}.tar.gz
-  sha256: 009d75b0b7b6b7653b5b34d400749335a5e65d348a65b01e4664f12d78316ce8
+  sha256: 793490343bf6c1b602b30fd1dfb6232be49aab576ef3f70ab6d385a8422edcfa
 
 build:
   merge_build_host: true  # [win]
@@ -23,8 +23,11 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-curl
+    - r-data.table
     - r-dplyr
     - r-ggplot2
     - r-httpcache
@@ -32,12 +35,18 @@ requirements:
     - r-jsonlite
     - r-leaflet
     - r-mapedit
+    - r-purrr
     - r-rlang
     - r-sf
+    - r-stringr
     - r-tibble
     - r-tidyr
+    - r-tidyselect
+    - r-xml2
   run:
     - r-base
+    - r-curl
+    - r-data.table
     - r-dplyr
     - r-ggplot2
     - r-httpcache
@@ -45,10 +54,14 @@ requirements:
     - r-jsonlite
     - r-leaflet
     - r-mapedit
+    - r-purrr
     - r-rlang
     - r-sf
+    - r-stringr
     - r-tibble
     - r-tidyr
+    - r-tidyselect
+    - r-xml2
 
 test:
   commands:
@@ -60,7 +73,9 @@ about:
   license: MIT
   summary: Client for the Ocean Biogeographic Information System (<https://obis.org>).
   license_family: MIT
-  license_file: LICENSE
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
+    - LICENSE
 
 extra:
   recipe-maintainers:
