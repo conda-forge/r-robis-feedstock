@@ -23,8 +23,11 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-curl
+    - r-data.table
     - r-dplyr
     - r-ggplot2
     - r-httpcache
@@ -32,12 +35,18 @@ requirements:
     - r-jsonlite
     - r-leaflet
     - r-mapedit
+    - r-purrr
     - r-rlang
     - r-sf
+    - r-stringr
     - r-tibble
     - r-tidyr
+    - r-tidyselect
+    - r-xml2
   run:
     - r-base
+    - r-curl
+    - r-data.table
     - r-dplyr
     - r-ggplot2
     - r-httpcache
@@ -45,10 +54,14 @@ requirements:
     - r-jsonlite
     - r-leaflet
     - r-mapedit
+    - r-purrr
     - r-rlang
     - r-sf
+    - r-stringr
     - r-tibble
     - r-tidyr
+    - r-tidyselect
+    - r-xml2
 
 test:
   commands:
@@ -60,7 +73,9 @@ about:
   license: MIT
   summary: Client for the Ocean Biogeographic Information System (<https://obis.org>).
   license_family: MIT
-  license_file: LICENSE
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
+    - LICENSE
 
 extra:
   recipe-maintainers:
