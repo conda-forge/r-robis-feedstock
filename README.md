@@ -1,11 +1,11 @@
-About r-robis
-=============
+About r-robis-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-robis-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/iobis/robis
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-robis-feedstock/blob/main/LICENSE.txt)
 
 Summary: Client for the Ocean Biogeographic Information System (<https://obis.org>).
 
